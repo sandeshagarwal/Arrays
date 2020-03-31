@@ -1,5 +1,21 @@
 import java.util.*;
-public class Main{
+ class M{
+  int search(int arr[],int x,int n){
+     int i;
+    for( i=0;i<n;i++)
+    {
+      if(arr[i] == x)
+      {
+        return i;
+      }
+      
+    }
+    //System.out.print("hii"); I want to ask why the code is not coming here at return -1 when there is a no. present in the array
+    //return -1 is outside for loop and not in else condition then why the control is not coming here when there is a no. present in the array
+    return -1;
+  }
+ }
+  public class Main{
   public static void main(String args[])
   {
     int arr[] = {20,5,6,7,25,1};
@@ -7,22 +23,12 @@ public class Main{
     System.out.println("Enter the element to be searched");
     Scanner sc = new Scanner(System.in);
     int x = sc.nextInt();
-    int flag = 0;
-    
-    for(int i=0;i<n;i++)
-    {
-      if(arr[i] == x)
-        flag = 1;
-      else 
-        flag = 0;
-    
-    }
-    //System.out.println(flag);
-    if(flag == 1)
-      System.out.println("element found");
-    else 
-        System.out.println("Not found");
-      
-     
+    M obj1 = new M();
+    int y = obj1.search(arr,x,n);
+    if(y == -1) 
+        System.out.print("Element is not present in array"); 
+    else
+        System.out.print("Element is present at index " + y); 
+  
       }
 }
