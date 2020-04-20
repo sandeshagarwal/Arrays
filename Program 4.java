@@ -14,7 +14,7 @@ System.out.println("Enter the position where element is to be Inserted in Array"
 int pos = sc.nextInt();
 System.out.println("The Initial Array is");
 System.out.println(Arrays.toString(arr));
-arr[pos-1] = x;
+arr[pos-1] = x; // The postion in array starts from zero
 System.out.println("The Final Array is");
 System.out.println(Arrays.toString(arr));
 
